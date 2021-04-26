@@ -42,14 +42,12 @@ function troca_conteudo_paragrafo_densidade(conteudo){//troco o conteudo do para
 }
 function calcular(equacao){
    dados = verifica_inputs_den_gor()
-   console.log(dados)
    if(dados != false || null){
         if(equacao == 'Jackson-e-Pullock-1978'){
             let user = new Dados_Jackson_Pullock_1978(dados[0].valor,parseInt(dados[1].valor),parseFloat(dados[2].valor), parseFloat(dados[4].valor),parseFloat(dados[3].valor))
             user.soma_dobras()
             user.densidade_corporal()
             user.siri()
-            console.log(user)
             if(dados[0].valor != 'M'){
                 alert('Está equação é para homens de 18 á 61 anos!')
             }
@@ -59,7 +57,6 @@ function calcular(equacao){
             let user = new Dados_Sloan_Masculino(dados[0].valor, parseInt(dados[1].valor), parseFloat(dados[5].valor), parseFloat(dados[3].valor))
             user.densidade_corporal()
             user.siri()
-            console.log(user)
             if(user.sexo != 'M' || user.idade > 26 || user.idade<18){
                 alert( 'Está equação é para homens entre 18 á 26 anos!')
             }
@@ -70,7 +67,6 @@ function calcular(equacao){
             let user = new Dados_Sloan_Blyth_Burt_Feminino(dados[0].valor, parseInt(dados[1].valor),parseFloat(dados[6].valor), parseFloat(dados[7].valor))    
             user.densidade_corporal()
             user.siri()
-            console.log(user)
             if(user.sexo != 'F'){
                 alert( 'Está equação é para mulheres!')
             }
@@ -80,7 +76,6 @@ function calcular(equacao){
             let user = new Dados_guedes(dados[0].valor, parseInt(dados[1].valor), parseFloat(dados[7].valor), parseFloat(dados[6].valor), parseFloat(dados[4].valor), parseFloat(dados[5].valor), parseFloat(dados[3].valor))
             user.densidade_corporal()
             user.siri()
-            console.log(user)
             if(user.idade < 17 || user.idade > 27){
                 alert( 'Está equação é para pessoas com idade entre 17 á 27 anos!')
             }
@@ -142,7 +137,6 @@ function filtra_arrObj_por_prop_id(obj,id){
 function bota_resultado_den_gor(densidade, gordura_corporal){
     var bloco_densidade = document.getElementById('resposta-densidade')
     var bloco_gordura = document.getElementById('resposta-gordura')
-    console.log(densidade.toFixed(2).replace(".",","), gordura_corporal)
     bloco_densidade.innerHTML = densidade.toFixed(2).replace(".",",") + " g/ml"
     bloco_gordura.innerHTML = gordura_corporal.toFixed(2).replace(".",",") + " %"
 }

@@ -1,11 +1,11 @@
 var footer = document.getElementsByTagName('footer')
 var footer_items = document.getElementsByClassName('footer-item')
-console.log(footer)
+
 function scroll(){
  
     
     var scroll = window.scrollY
-    console.log(scroll)
+
     if(scroll> 265){
         footer[0].style.animation = 'radient 5s linear infinite, move-up 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards'
         footer_items[0].style.animation = 'moveup 300ms 400ms cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards'

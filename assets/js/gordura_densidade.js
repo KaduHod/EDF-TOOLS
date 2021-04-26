@@ -1,11 +1,3 @@
-//Jackson e Pullock, 1978 
-// Homens 18 á 61 anos de idade, não atleta 
-// D= 1,1093800 - 0,0008267 x (x3) + 0,0000016 x (x3)² - 0,0002574 x (x4)
-// X3 = (Peito + abdomen + coxa) 
-// X4 = IDADE
-
-
-//preciso de inputs para dobras de peito, abdomen e coxa
 
 class Dados_Jackson_Pullock_1978{
     constructor(sexo,idade,Peitoral, Abdomen, Coxa){
@@ -106,8 +98,3 @@ class Dados_guedes{
 }
 
 
-/*
- var JP = density_jackson_pullock1978(dobras_)
- var SBB_DEN = density_Sloan_Blyth_Burt(dobras_)
- var guedes_den = density_guedes(dobras_)
- console.log(siri(density_guedes(dobras_)))*/
