@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EDF TOOLS</title>
+    <link rel="stylesheet" href="assets/css/header.css">
+    <link rel="stylesheet" href="assets/css/general.css">
+    <link rel="stylesheet" href="assets/css/form.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
+    <style>
+        body{
+            margin: 0;
+            background-color:  #ffffff;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        #corpo{
+            padding: 0px 100px;
+        }
+        p{
+            font-size: 15px;
+        }
+        *{
+            margin:0;
+            padding: 0;
+        }
+    </style>
+</head>
+<body class="flex flex-column" onbeforeunload="atualiza_no_topo()" onscroll="scroll()">
+    <script src="assets/js/den_gor.js"></script>
+    <script src="assets/js/gordura_densidade.js"></script>
+    <script src="assets/js/scroll.js"></script>
+    <script>
+        function atualiza_no_topo(){
+            window.scrollTo(0,0)
+        }
+        atualiza_no_topo()
+    </script>
+    <header class="flex flex-centerY">
+        <h1>EDF TOOL'S</h1>
+    </header>
+    <div id="corpo" class="flex flex-column" >
+        <div id="form-container" class="flex-spaceAround-center move-up-animation">
+            <div class="form-content">
+                <div class="tittle">
+                    <h3>Dados Antropométricos</h3>
+                </div>
+                <form action="" class="flex height100" method="post">
+                    <div class="flex-column height100" style="border: 1px solid rgba(168, 144, 144, 0);flex:1;">
+                        <label for="Sexo">Sexo
+                            <select name="sexo" class="input-den-gor" id="sexo">
+                                <option value="M">Masculino</option>
+                                <option value="F">Feminino</option>
+                            </select>
+                        </label>
+                        <label for="Idade">Idade
+                            <input type="number" class="input-den-gor" id="Idade" name="Idade">anos
+                        </label>
+                        <label for="Peitoral">Peitoral
+
+                            <input type="number" class="input-den-gor" id="Peitoral" name="Peitoral">mm
+                        </label>
+                        <label for="Coxa">Coxa
+
+                            
+                            <input type="number" class="input-den-gor" id="Coxa" name="Coxa"> mm
+                        </label>
+                        
+                        
+                    </div>
+                    <div class="flex-column height100" style="border: 1px solid rgba(168, 144, 144, 0);flex:1;">
+                        <label for="Abdomen">Abdômen
+
+                            <input type="number" class="input-den-gor" id="Abdomen" name="Abdomen">mm
+                        </label>
+                        
+                        <label for="Sub-escapular">Sub-escapular
+
+                            <input type="number" class="input-den-gor" id="Sub-escapular" name="Sub-escapular"> mm
+                        </label>
+                        <label for="Suprailíaca">Suprailíaca
+
+                            <input type="number" class="input-den-gor" id="Suprailíaca" name="Suprailíaca"> mm
+                        </label>
+                        <label for="Tricíptal">Triciptal
+
+                            <input type="number" class="input-den-gor" id="Tricíptal" name="Tricíptal"> mm
+                        </label>
+                    </div>
+                    
+                </form>
+            </div>
+        </div>
+        <section class="section-content flex move-up-animation">
+            <div class="section-content-content flex-column">
+                <div class="tittle">
+                    <h1>Densidade e gordura corporal</h1>
+                </div>
+                <div class="mini-menu">
+                    <ul class="flex-spaceAround-center">
+                        <li class="list-item selected" id="Jackson-e-Pullock-1978" name="Jackson-e-Pullock-1978" onclick="bota_underline_aumenta_font(document.getElementById('Jackson-e-Pullock-1978'))">
+                            Jackson e Pollock, 1978 
+                        </li>
+                        <li class="list-item" onclick="bota_underline_aumenta_font(document.getElementById('Sloan-masculino'))" id="Sloan-masculino" name="Sloan-masculino">
+                            Sloan masculino
+                        </li>
+                        <li class="list-item" onclick="bota_underline_aumenta_font (document.getElementById('Sloan-Burt-&-Blyth-feminino'))" name="Sloan, Burt & Blyth feminino" id="Sloan-Burt-&-Blyth-feminino">
+                            Sloan, Burt & Blyth feminino
+                        </li>
+                        <li class="list-item" id="Guedes-1985" onclick="bota_underline_aumenta_font(document.getElementById('Guedes-1985'))" name="Guedes-1985">
+                            Guedes, 1985
+                        </li>
+                    </ul>          
+                </div>
+                <div class="container-description">
+                    <div class="description-tittle" >
+                        <h5 id="tittle-dinamic" class="trasition5s">Jackson e Pullock, 1978 - Densidade corporal</h5>
+                    </div>
+                    <p id="para-dinamic" class="trasition5s">
+                        Homens 18 á 61 anos de idade, não atletas  <br>
+                        Dados: Dobras cutaneas de peito, abdômen e coxa <br>
+                        D= 1,1093800 - 0,0008267 x (x3) + 0,0000016 x (x3)² - 0,0002574 x (x4) <br>
+                        X3 = (Peito + abdômen + coxa) <br>
+                        X4 = IDADE <br>
+                    </p>
+                    <div class="description-tittle">
+                        <h5>Siri, 1962 - Porcentagem de gordura</h5>
+                    </div>
+                    <p>
+                        Gordura% = (4,95/D - 4,50)x100
+                    </p>
+
+                    <button class="botao" id="botao-den-gor" onclick="calcular('Jackson-e-Pullock-1978')">
+                        Calcular % de gordura e densidade corporal
+                    </button>        
+                    <div id="resposta" class="flex-center-center">
+                        <div  class="flex-column just-spaceAround ali-center resposta  font25 " >
+                            <h3>Porcetagem de gordura corporal</h3>
+                            <p id="resposta-gordura">.  .  .</p>
+                        </div> <div class="flex-column just-spaceAround resposta ali-center  font25" >
+                            <h3>Densidade corporal</h3>
+                            <p id="resposta-densidade">.  .  .</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <article class="section-content-article flex-column">
+                <div class="article-img">
+                    <img src="assets/img/logo-scielo.png"  alt="Logo site de articos científicos">
+                </div>
+                <div class="article-desc">
+                    <h4>Equações preditivas de gordura corporal: saber escolher é fundamental
+                        Roberto Fernandes da Costa </h4>
+                    <p>Mestre em Educação Física - USP, Doutor em Ciências Aplicadas à Pediatria - Unifesp, Diretor Científico do Centro de Estudos e Pesquisas Sanny - CEPS</p>
+
+                    <a href="https://www.scielo.br/scielo.php?script=sci_arttext&pid=S1517-86922010000500015" target="_blank" rel="noopener noreferrer">Equações preditivas de gordura corporal. Rev Bras Med Esporte,  Niterói ,  v. 16, n. 5, p. 393-394,  Oct.  2010 .   Available from <http://www.scielo.br/scielo.php?script=sci_arttext&pid=S1517-86922010000500015&lng=en&nrm=iso>. access on  25  Apr.  2021.  https://doi.org/10.1590/S1517-86922010000500015.</a>
+
+                    
+                </div>
+            </article>
+        </section>
+        
+    </div>
+    <footer class="flex-column jusSA-alCent">
+        <div class="footer-item">
+            <div class="footer-img" id="github">
+
+            </div>
+            <div class="footer-desc  flex-center-center">
+                <a href="https://github.com/KaduHod" target="_blank" rel="noopener noreferrer">KaduHod</a>
+            </div>
+        </div>
+        <div class="footer-item">
+            <div class="footer-img" id="gmail">
+
+            </div>
+            <div class="footer-desc  flex-center-center"">
+                
+                Carlosjr.ribas@gmail.com
+            </div>
+        </div>
+        <div class="footer-item">
+            <div class="footer-img" id="linkedin">
+
+            </div>
+            <div class="footer-desc flex-center-center">
+                <a href="https://www.linkedin.com/in/carlosjrribas98/" target="_blank" rel="noopener noreferrer">carlosjrribas98</a>
+            </div>
+        </div>
+
+
+    </footer>
+</body>
+</html>

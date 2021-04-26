@@ -1,0 +1,19 @@
+header{
+    height: 50px;
+    background:linear-gradient(45deg,#5C7362,#736767);
+    background-size: 300% 300%;
+    padding: 0px 150px;
+    animation: radient 5s linear infinite;
+    color: white;
+}
+@keyframes radient{
+    0%{
+        background-position-x:0%;
+    }
+    50%{
+        background-position-x: 100%;
+    }
+    100%{
+        background-position-x:0% ;
+    }
+}
