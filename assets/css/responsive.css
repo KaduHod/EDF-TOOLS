@@ -1,3 +1,8 @@
+@media screen and (max-width:1900px ){
+    #corpo{
+        padding: 0px 100px;
+    }
+}
 @media screen and (max-width:1200px ){
     body{
         
@@ -23,9 +28,7 @@
         display: hidden !important;
         visibility: collapse;
     }
-    #corpo{
-        padding: 0px 100px;
-    }
+    
     .footer-item{
         display: hidden !important;
         visibility: collapse;
