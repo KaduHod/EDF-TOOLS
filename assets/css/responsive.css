@@ -1,0 +1,131 @@
+@media screen and (max-width:1200px ){
+    body{
+        
+    }
+    form{
+        display: flex;
+        flex-direction: column;
+        width: fit-content;
+    }
+    #form-content{
+        width: fit-content;
+    }
+    #form-container{
+        width: fit-content;
+        align-self: center;
+    }
+    section{
+        display:flex;
+        flex-direction: column;
+        height: fit-content;
+    }
+    footer{
+        display: hidden !important;
+        visibility: collapse;
+    }
+    #corpo{
+        padding: 0px 100px;
+    }
+    .footer-item{
+        display: hidden !important;
+        visibility: collapse;
+    }
+    #titulo-responsive{
+        align-self: center;
+        justify-self: center;
+    }
+    .description-tittle{
+        display: flex;
+        justify-content: center;
+    }
+    #tittle-dinamic{
+        
+    }
+    #para-dinamic{
+        display: flex;
+        justify-content: center;
+    }
+    #siri-responsive{
+        display: flex;
+        justify-content: center;
+    }
+    .container-description{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    #article{
+        display: flex;
+        flex-direction: row;
+        height: fit-content;
+        padding: 20px 10px;
+    }
+    .article-img{
+        height: 100%;
+        flex: 1;
+    }
+    .article-desc{
+        height: 100%;
+        flex: 2;
+    }
+}
+@media screen and (max-width:600px ){
+    .article-img{
+        display: hidden;
+        visibility: collapse;
+        flex: 0;
+        width: 0px;
+    }
+}
+@media screen and (max-width:500px ){
+    .article-img{
+        display: hidden;
+        visibility: collapse;
+        flex: 0;
+        width: 0px;
+    }
+    .titulo-menor-500px{
+        font-size: 17px;
+    }
+    form{
+        font-size: 15px;
+    }
+    li{
+        font-size: 11px;
+        width: 23%;
+    }
+    .mini-menu, ul{
+        height: 100px;
+    }
+    .responsive-corpo{
+        padding: 0px;
+    }
+    body{
+        padding: 0px;
+    }
+}
+@media screen and (max-width:480px ){
+    #corpo{
+        padding: 0px 40px;
+    }
+    body{
+        overflow-x: hidden;
+    }
+    .titulo-menor-500px{
+        font-size: 15px;
+    }
+    form{
+        font-size: 13px;
+    }
+    li{
+        font-size: 9px;
+        width: 23%;
+    }
+    .botao{
+        font-size: 13px;
+    }
+    .texto-responsive{
+        font-size: 11px;
+    }
+    
+}

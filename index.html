@@ -9,15 +9,14 @@
     <link rel="stylesheet" href="assets/css/general.css">
     <link rel="stylesheet" href="assets/css/form.css">
     <link rel="stylesheet" href="assets/css/footer.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
     <style>
         body{
             margin: 0;
             background-color:  #ffffff;
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
         }
-        #corpo{
-            padding: 0px 100px;
-        }
+        
         p{
             font-size: 15px;
         }
@@ -38,13 +37,13 @@
         atualiza_no_topo()
     </script>
     <header class="flex flex-centerY">
-        <h1>EDF TOOL'S</h1>
+        <h1 id="h1-header-reponsive" class="titulo-menor-500px">EDF TOOL'S</h1>
     </header>
-    <div id="corpo" class="flex flex-column" >
+    <div id="corpo" class="flex flex-column responsive-corpo" >
         <div id="form-container" class="flex-spaceAround-center move-up-animation">
             <div class="form-content">
                 <div class="tittle">
-                    <h3>Dados Antropométricos</h3>
+                    <h3 class="titulo-menor-500px">Dados Antropométricos</h3>
                 </div>
                 <form action="" class="flex height100" method="post">
                     <div class="flex-column height100" style="border: 1px solid rgba(168, 144, 144, 0);flex:1;">
@@ -94,8 +93,8 @@
         </div>
         <section class="section-content flex move-up-animation">
             <div class="section-content-content flex-column">
-                <div class="tittle">
-                    <h1>Densidade e gordura corporal</h1>
+                <div class="tittle" id="titulo-responsive">
+                    <h1 class="titulo-menor-500px">Densidade e gordura corporal</h1>
                 </div>
                 <div class="mini-menu">
                     <ul class="flex-spaceAround-center">
@@ -117,7 +116,7 @@
                     <div class="description-tittle" >
                         <h5 id="tittle-dinamic" class="trasition5s">Jackson e Pullock, 1978 - Densidade corporal</h5>
                     </div>
-                    <p id="para-dinamic" class="trasition5s">
+                    <p id="para-dinamic" class="texto-responsive trasition5s">
                         Homens 18 á 61 anos de idade, não atletas  <br>
                         Dados: Dobras cutaneas de peito, abdômen e coxa <br>
                         D= 1,1093800 - 0,0008267 x (x3) + 0,0000016 x (x3)² - 0,0002574 x (x4) <br>
@@ -125,9 +124,9 @@
                         X4 = IDADE <br>
                     </p>
                     <div class="description-tittle">
-                        <h5>Siri, 1962 - Porcentagem de gordura</h5>
+                        <h5 class="titulo-menor-500px">Siri, 1962 - Porcentagem de gordura</h5>
                     </div>
-                    <p>
+                    <p id="siri-responsive">
                         Gordura% = (4,95/D - 4,50)x100
                     </p>
 
@@ -136,25 +135,25 @@
                     </button>        
                     <div id="resposta" class="flex-center-center">
                         <div  class="flex-column just-spaceAround ali-center resposta  font25 " >
-                            <h3>Porcetagem de gordura corporal</h3>
+                            <h3 class="titulo-menor-500px">Porcetagem de gordura corporal</h3>
                             <p id="resposta-gordura">.  .  .</p>
                         </div> <div class="flex-column just-spaceAround resposta ali-center  font25" >
-                            <h3>Densidade corporal</h3>
+                            <h3 class="titulo-menor-500px">Densidade corporal</h3>
                             <p id="resposta-densidade">.  .  .</p>
                         </div>
                     </div>
                 </div>
             </div>
-            <article class="section-content-article flex-column">
+            <article id="article" class="section-content-article flex-column">
                 <div class="article-img">
                     <img src="assets/img/logo-scielo.png"  alt="Logo site de articos científicos">
                 </div>
                 <div class="article-desc">
-                    <h4>Equações preditivas de gordura corporal: saber escolher é fundamental
+                    <h4 class="titulo-menor-500px">Equações preditivas de gordura corporal: saber escolher é fundamental
                         Roberto Fernandes da Costa </h4>
-                    <p>Mestre em Educação Física - USP, Doutor em Ciências Aplicadas à Pediatria - Unifesp, Diretor Científico do Centro de Estudos e Pesquisas Sanny - CEPS</p>
+                    <p class="texto-responsive">Mestre em Educação Física - USP, Doutor em Ciências Aplicadas à Pediatria - Unifesp, Diretor Científico do Centro de Estudos e Pesquisas Sanny - CEPS</p>
 
-                    <a href="https://www.scielo.br/scielo.php?script=sci_arttext&pid=S1517-86922010000500015" target="_blank" rel="noopener noreferrer">Equações preditivas de gordura corporal. Rev Bras Med Esporte,  Niterói ,  v. 16, n. 5, p. 393-394,  Oct.  2010 .   Available from <http://www.scielo.br/scielo.php?script=sci_arttext&pid=S1517-86922010000500015&lng=en&nrm=iso>. access on  25  Apr.  2021.  https://doi.org/10.1590/S1517-86922010000500015.</a>
+                    <a class="texto-responsive" href="https://www.scielo.br/scielo.php?script=sci_arttext&pid=S1517-86922010000500015" target="_blank" rel="noopener noreferrer">Equações preditivas de gordura corporal. Rev Bras Med Esporte,  Niterói ,  v. 16, n. 5, p. 393-394,  Oct.  2010 .   Available from <http://www.scielo.br/scielo.php?script=sci_arttext&pid=S1517-86922010000500015&lng=en&nrm=iso>. access on  25  Apr.  2021.  https://doi.org/10.1590/S1517-86922010000500015.</a>
 
                     
                 </div>
