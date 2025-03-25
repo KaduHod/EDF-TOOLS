@@ -1,1 +1,1 @@
-EDF TOOLS é uma ferramenta web para calcular a densidade corporal e a porcentagem de gordura com base em medidas antropométricas. O usuário insere dados como idade, sexo e dobras cutâneas, escolhe um método e obtém os resultados instantaneamente. A interface é responsiva e oferece uma experiência interativa e intuitiva.
+Ferramenta web para calcular a densidade corporal e a porcentagem de gordura com base em medidas antropométricas. O usuário insere os dados e recebe os resultados instantaneamente.
